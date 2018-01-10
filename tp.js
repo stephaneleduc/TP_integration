@@ -50,6 +50,9 @@ var $range_police = $("#container-police input[type=range]");
 
 var $articles_position = $("#articles-position");
 
+var $articles_image = $("#articles-image");
+
+
 var $red_menu = $("#red_menu");
 var $green_menu = $("#green_menu");
 var $blue_menu = $("#blue_menu");
@@ -197,6 +200,7 @@ restore_articles();
 $myprofil.click(function() { 
 
         $content_wall.css("display", "none");
+        $error_article.css("display", "none");
         $content_profil.css("display", "block");
 });
 
@@ -205,6 +209,7 @@ $mywall.click(function() {
 
         $content_wall.css("display", "block");
         $content_profil.css("display", "none");
+        $error_article.css("display", "none");
 });
 
 $profil_form.submit(function( event ) { 
@@ -276,7 +281,8 @@ $wall_form.submit(function( event ) {
 
         if (title == "" || description == "" || profil.name == "" || profil.firstname == "" ||
          profil.address == "" || profil.birth == "" || profil.mail == "" || profil.tel == "" || image == "") {
-                $error_article.text("Veuillez completer votre profil, mettre un titre, une description et une image avant de publier un article !")
+                $error_article.text("Veuillez completer votre profil, mettre un titre, une description et une image avant de publier un article !");
+                $error_article.css("display", "block");
                 return;
         }
 
@@ -321,12 +327,8 @@ $wall_form.submit(function( event ) {
 
 $articles.on("click", ".article span", function(){
 
-
         var title = $(this).parent().children("h4").text();
         var description = $(this).parent().children("p").text();
-        
-
-
         var retrieved_articles= localStorage.getItem("articles");
         var full_articles = JSON.parse(retrieved_articles);
        
@@ -341,8 +343,6 @@ $articles.on("click", ".article span", function(){
 
         $(this).parent().remove();
         
-      
-        
 });
 
 
@@ -354,12 +354,10 @@ var $close = $(".close");
 var $mynavigation = $("#mynavigation");
 var $params = $("#params");
 
-
 $close.click(function () {
 
         $mynavigation.css("width", "0");
 });
-
 
 $content_wall.click(function() {
 

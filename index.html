@@ -10,9 +10,9 @@
 <body>
 
         <div id="mynavigation" class="navigation">
-                <a href="#" class="close">&#9776;</a>
+                <a class="close">&#9776;</a>
                 <ul id="menu-vertical">
-                        <li><a href="#">Couleur menu:</a>
+                        <li><a>Couleur menu:</a>
                                 <div id="color-rect-menu"></div>
                                 <div id="container-menu">  
                                         <input type="range" name="red" class="red" min=0 max=255 value=0>
@@ -24,7 +24,7 @@
                                 </div> 
                         </li>
                         <br>
-                         <li><a href="#">Couleur fond:</a>
+                         <li><a>Couleur fond:</a>
                                 <div id="color-rect-fond"></div> 
                                 <div id="container-fond">     
                                         <input type="range" name="red" class="red" min=0 max=255 value=0>
@@ -36,13 +36,13 @@
                                 </div>
                         </li>
                         <br>
-                        <li><a href="#">Taille de polices:</a> 
+                        <li><a>Taille de polices:</a> 
                                 <div id="container-police">     
                                         <input type="range" name="red" class="red" min=15 max=35 value=20>
                                         <span id="police_size_val">20</span>
                                 </div>
                         </li>
-                        <li><a href="#">Positionnement des articles:</a> 
+                        <li><a>Positionnement des articles:</a> 
                                 <div id="container-position">     
                                         <select name="liste" size="1" id="articles-position">
                                                 <option selected="selected" value="center">Au centre (par défaut)
@@ -102,6 +102,7 @@
                 <input type="submit" value="Mettre à jour" >
             </form>
         </div>
+        <span id="error_article"></span>
         <div id="content_wall">
 
                 <form id="wall_form">
@@ -111,7 +112,8 @@
                      <label>
                              <textarea name="description" id="description" placeholder="Description..."></textarea>
                      </label>
-                     <input id="add_article" type="submit" value="Ajouter l'article" >
+                     <input type="text" id="file" name"file" placeholder="Nom de l'image..." >
+                     <input id="add_article" type="submit" value="Ajouter l'article">
                  </form>
 
                  <br>

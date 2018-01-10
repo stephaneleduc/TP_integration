@@ -15,6 +15,8 @@ var list_articles = [];
 var $title_change = $(".title");
 var $content = $('.content');
 
+var $file = $("#file");
+
 var $confirm_profil = $("#confirm_profil");
 
 var $title=$("#title");
@@ -267,13 +269,14 @@ $wall_form.submit(function( event ) {
         event.preventDefault();
 
         var bool = 0;
+        var image = $file.val();
         var title = $title.val();
         var description = $description.val();
         $error_article.text("");
 
         if (title == "" || description == "" || profil.name == "" || profil.firstname == "" ||
-         profil.address == "" || profil.birth == "" || profil.mail == "" || profil.tel == "" ) {
-                $error_article.text("Veuillez completer votre profil avant de publier un article !")
+         profil.address == "" || profil.birth == "" || profil.mail == "" || profil.tel == "" || image == "") {
+                $error_article.text("Veuillez completer votre profil, mettre un titre, une description et une image avant de publier un article !")
                 return;
         }
 
@@ -296,6 +299,7 @@ $wall_form.submit(function( event ) {
         article += "<h5 class='autor'>"+profil.name+" "+profil.firstname+"</h5>";
         article += "<h4 class='title'>"+title+"</h4>";
         article += "<p class='content'>"+description+"</p>";
+        article += "<img class='image' src=img/"+image+">";
         article += "</div>";
 
         save_article(list_articles, article);

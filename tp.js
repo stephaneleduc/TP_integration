@@ -146,7 +146,7 @@ var restore_color_fond = function() {
         }
 }
 
-var restore_article = function() {
+var restore_articles = function() {
         var retrieved_articles= localStorage.getItem("articles");
         var full_articles = JSON.parse(retrieved_articles);
         if (full_articles) {
@@ -189,7 +189,7 @@ restore_color_fond();
 restore_color_menu();
 restore_police();
 restore_position();
-restore_article();
+restore_articles();
 
 
 $myprofil.click(function() { 
@@ -271,7 +271,8 @@ $wall_form.submit(function( event ) {
         var description = $description.val();
         $error_article.text("");
 
-        if (title == "" || description == "" || profil.name == "" || profil.firstname == "" ) {
+        if (title == "" || description == "" || profil.name == "" || profil.firstname == "" ||
+         profil.address == "" || profil.birth == "" || profil.mail == "" || profil.tel == "" ) {
                 $error_article.text("Veuillez completer votre profil avant de publier un article !")
                 return;
         }
@@ -287,6 +288,8 @@ $wall_form.submit(function( event ) {
         if (bool == 1) {
                 return;
         }
+
+        description = description.replace(/\n/g, "");
       
         var article = "<div class='article'>";
         article += "<span class='suppr'>X</span>";
@@ -344,37 +347,37 @@ $articles.on("click", ".article span", function(){
 //Pour le menu latéral
 
 var $close = $(".close");
-var $sidenav = $("#mysidenav");
+var $mynavigation = $("#mynavigation");
 var $params = $("#params");
 
 
 $close.click(function () {
 
-        $sidenav.css("width", "0");
+        $mynavigation.css("width", "0");
 });
 
 
 $content_wall.click(function() {
 
-        $sidenav.css("width", "0");
+        $mynavigation.css("width", "0");
 
 });
 
 $content_profil.click(function() {
         
-        $sidenav.css("width", "0");
+        $mynavigation.css("width", "0");
         
 });
 
 $menu.click(function() {
         
-        $sidenav.css("width", "0");
+        $mynavigation.css("width", "0");
         
 });
 
 $params.click(function() {
 
-        $sidenav.css("width", "300px");
+        $mynavigation.css("width", "300px");
 
 });
 

@@ -100,6 +100,12 @@ h5, .error, #content_profil input {
     text-align: center;
 }
 
+#description {
+    resize : none;
+    height: 70px;
+    width : 40%;
+}
+
 .error {
     color: red;
 }
@@ -147,7 +153,7 @@ h5, .error, #content_profil input {
 
 
 /*TEST POUR LE MENU LATERAL*/
-.sidenav {
+.navigation {
     height: 100%;
     width: 0;
     position: fixed;
@@ -160,25 +166,25 @@ h5, .error, #content_profil input {
     padding-top: 60px;
 }
 
-.sidenav a {
+.navigation a {
     font-size: 20px;
     color: rgb(110, 105, 105);
     display: block;
     transition: 0.3s;
 }
 
-.sidenav a:hover {
+.navigation a:hover {
     color: white;
 }
 
-.sidenav .close:hover:after {
+.navigation .close:hover:after {
 
     text-align:center;
     font-size: 25px;
     content:" Fermer le menu \2630 ";
 }
 
-.sidenav .close {
+.navigation .close {
     cursor: pointer;
     position: absolute;
     top: 0;
@@ -212,14 +218,6 @@ select {
     color: white;
 
 }
-/*
-RESPONSIVE ????
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-
-*/
 
 

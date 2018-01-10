@@ -1,0 +1,221 @@
+body {
+
+    min-height:100vh;
+}
+
+
+.menu  {
+
+    height:20%;
+    border-radius: 5px;
+    background-color: rgb(30, 30, 245);
+    display: flex;
+    justify-content: space-around;
+    font-size : 20px;
+}
+
+#wall, #profil {
+    margin :auto;
+    
+}
+
+a {
+
+    color :white;
+    text-decoration: none;
+}
+
+#content_profil {
+
+    height:70%;
+    font-size : 20px;
+}
+
+#content_wall {
+    height: 70%;
+    font-size : 20px;
+
+}
+
+#profil_form {
+
+    margin-top : 10px;
+}
+
+#profil_form label {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+#content_wall, #content_profil {
+
+    border-radius : 5px;
+    display:none;
+
+}
+
+#articles {
+    border-radius : 5px;
+    display:flex;
+    justify-content: center;
+    flex-wrap:wrap;
+
+}
+
+#wall_form {
+
+    margin-top : 10px;
+    height:35%;
+    border-radius : 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content :center ;
+    text-align: center;
+}
+
+#wall_form input[type="submit"] {
+    
+        width : 20%;
+        margin-top: 1px;
+    }
+
+input[type="submit"] {
+
+    display :block;
+    margin: auto;
+    text-align:center;
+    width: 30px;
+}
+
+#content_profil label {
+    display: flex;
+    flex-direction : column;
+}
+
+h5, .error, #content_profil input {
+
+    width:30%;
+    margin :auto;
+    justify-content : center;
+    text-align: center;
+}
+
+.error {
+    color: red;
+}
+
+#content_profil input {
+
+    border-radius:10px;
+}
+
+.article {
+    color:rgb(105, 99, 99);
+    width: 20%;
+    height: 40%;
+    margin: 2px;
+    background-color:white;
+}
+
+.article p, .article h4 {
+    text-align: center;
+}
+
+.article span {
+    margin-left : 20px;
+    cursor:pointer;
+    font-weight: bold;
+}
+
+.article .content {
+    overflow: auto;
+    hyphens: auto;
+    text-align:center;
+    height:80px;
+    width:100%;
+}
+
+#error_article, #confirm_profil {
+    color: red;
+    display: block;
+}
+
+
+/*TEST POUR LE MENU LATERAL*/
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    font-size: 20px;
+    color: rgb(110, 105, 105);
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: white;
+}
+
+.sidenav .close:hover:after {
+
+    text-align:center;
+    font-size: 25px;
+    content:" Fermer le menu \2021 ";
+}
+
+.sidenav .close {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 25px;
+    margin-left: 50px;
+}
+
+#params {
+
+    height:10%;
+    font-size : 30px;
+    cursor: pointer;
+}
+
+#color-rect-menu, #color-rect-fond  {
+    width:180px;
+    height:100px;
+}
+
+select {
+    width: 200px;
+    text-align:center;
+    font-size: 15px;
+}
+
+#container-menu span, #container-fond span, #container-police span {
+
+    vertical-align:top;
+    display:inline-block;
+    color: white;
+
+}
+/*
+RESPONSIVE ????
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+*/
+
+

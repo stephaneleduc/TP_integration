@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TP</title>
+    <link rel="stylesheet" href="tp.css">
+</head>
+<body>
+
+        <div id="mysidenav" class="sidenav">
+                <a href="#" class="close">&#8225;</a>
+                <ul id="menu-vertical">
+                        <li><a href="#"></a>Couleur menu:</a>
+                                <div id="color-rect-menu"></div>
+                                <div id="container-menu">  
+                                        <input type="range" name="red" class="red" min=0 max=255 value=0>
+                                        <span id="red_menu">0</span>
+                                        <input type="range" name="green" class="green" min=0 max=255 value=0>
+                                        <span id="green_menu">0</span>
+                                        <input type="range" name="blue" class="blue" min=0 max=255 value=0>
+                                        <span id="blue_menu">0</span>
+                                </div> 
+                        </li>
+                        <br>
+                         <li><a href="#">Couleur fond:</a>
+                                <div id="color-rect-fond"></div> 
+                                <div id="container-fond">     
+                                        <input type="range" name="red" class="red" min=0 max=255 value=0>
+                                        <span id="red_fond">0</span>
+                                        <input type="range" name="green" class="green" min=0 max=255 value=0>
+                                        <span id="green_fond">0</span>
+                                        <input type="range" name="blue" class="blue" min=0 max=255 value=0>
+                                        <span id="blue_fond">0</span>
+                                </div>
+                        </li>
+                        <br>
+                        <li><a href="#">Taille de polices:</a> 
+                                <div id="container-police">     
+                                        <input type="range" name="red" class="red" min=15 max=35 value=20>
+                                        <span id="police_size_val">20</span>
+                                </div>
+                        </li>
+                        <li><a href="#">Positionnement articles:</a> 
+                                <div id="container-position">     
+                                        <select name="liste" size="1" id="articles-position">
+                                                <option selected="selected" value="center">Au centre (par défaut)
+                                                <option value="flex-start">A gauche
+                                                <option value="flex-end">A droite
+                                                <option value="space-between">Espacé au début
+                                                <option value="space-around">Espacé complet
+                                        </select>
+                                </div>
+                        </li>
+                </ul>
+        </div>
+                              
+        <span id="params">&#9776;</span>
+
+        <div class="menu">
+            <div id="profil">
+                <a id="myprofil" href="#">MON PROFIL</a>
+            </div>
+            <div id="wall">
+                <a id="mywall" href="#">MON MUR</a>
+            </div>
+        </div>
+
+        <div id="content_profil">
+            <form id="profil_form">
+                <label> 
+                        <h5>Nom :</h5>
+                        <input type="text" name="name" id="name" required>
+                        <p class="error"></p>
+                </label>
+                <label> 
+                        <h5>Prénom :</h5>
+                        <input type="text" name="firstname" id="firstname" required>
+                        <p class="error"></p>
+                </label>
+                <label> 
+                        <h5>Adresse :</h5>
+                        <input type="text" name="address" id="address" required>
+                        <p class="error"></p>
+                </label>
+                <label> 
+                        <h5>Telephone :</h5>
+                        <input type="text" name="tel" id="tel" required>
+                        <p class="error"></p>
+                </label>
+                <label> 
+                        <h5>Mail :</h5>
+                        <input type="text" name="mail" id="mail" required>
+                        <p class="error"></p>
+                </label>
+                <label> 
+                        <h5>Date de Naissance :</h5>
+                        <input type="date" name="birth" id="birth" required>
+                        <p class="error"></p>
+                </label>
+                <input type="submit" value="Mettre à jour" >
+            </form>
+        </div>
+        <div id="content_wall">
+
+                <form id="wall_form">
+                    <span class="addtext">Ajouter un nouvel article :</span> 
+                     <label> 
+                             <input type="text" name="title" id="title" placeholder="Titre...">
+                     </label>
+                     <label>
+                             <textarea name="description" id="description" placeholder="Description..."></textarea>
+                     </label>
+                     <input id="add_article" type="submit" value="Ajouter l'article" >
+                 </form>
+
+                 <br>
+                 <div id="articles"></div>
+        </div>
+
+
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="tp.js"></script>
+
+</body>
+</html>

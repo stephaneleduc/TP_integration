@@ -168,6 +168,7 @@ h5, .error, #content_profil input, #file {
     color: red;
     display:none;
     text-align: center;
+    font-size : 30px;
 
 }
 

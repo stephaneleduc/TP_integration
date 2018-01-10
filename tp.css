@@ -60,7 +60,6 @@ a {
     display:flex;
     justify-content: center;
     flex-wrap:wrap;
-
 }
 
 #wall_form {
@@ -122,6 +121,11 @@ h5, .error, #content_profil input {
     text-align: center;
 }
 
+.article h4 {
+    overflow: auto;
+    hyphens: auto;
+}
+
 .article span {
     margin-left : 20px;
     cursor:pointer;
@@ -171,7 +175,7 @@ h5, .error, #content_profil input {
 
     text-align:center;
     font-size: 25px;
-    content:" Fermer le menu \2021 ";
+    content:" Fermer le menu \2630 ";
 }
 
 .sidenav .close {

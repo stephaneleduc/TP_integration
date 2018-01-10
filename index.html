@@ -10,9 +10,9 @@
 <body>
 
         <div id="mysidenav" class="sidenav">
-                <a href="#" class="close">&#8225;</a>
+                <a href="#" class="close">&#9776;</a>
                 <ul id="menu-vertical">
-                        <li><a href="#"></a>Couleur menu:</a>
+                        <li><a href="#">Couleur menu:</a>
                                 <div id="color-rect-menu"></div>
                                 <div id="container-menu">  
                                         <input type="range" name="red" class="red" min=0 max=255 value=0>
@@ -42,7 +42,7 @@
                                         <span id="police_size_val">20</span>
                                 </div>
                         </li>
-                        <li><a href="#">Positionnement articles:</a> 
+                        <li><a href="#">Positionnement des articles:</a> 
                                 <div id="container-position">     
                                         <select name="liste" size="1" id="articles-position">
                                                 <option selected="selected" value="center">Au centre (par défaut)
@@ -107,7 +107,7 @@
                 <form id="wall_form">
                     <span class="addtext">Ajouter un nouvel article :</span> 
                      <label> 
-                             <input type="text" name="title" id="title" placeholder="Titre...">
+                             <input type="text" name="title" id="title" placeholder="Titre..." maxlength="20">
                      </label>
                      <label>
                              <textarea name="description" id="description" placeholder="Description..."></textarea>
